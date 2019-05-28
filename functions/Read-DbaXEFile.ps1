@@ -57,6 +57,10 @@ function Read-DbaXEFile {
         [switch]$EnableException
     )
     process {
+        # New-Object Microsoft.SqlServer.XEvent.XELite.XEFileEventStreamer C:\temp\sample.xel
+        # https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/#
+        # Get-PSMDAssembly *XELite* | Find-PSMDType | Get-PSMDConstructor
+
         foreach ($file in $path) {
             # in order to ensure CSV gets all fields, all columns will be
             # collected and output in the first (all all subsequent) object

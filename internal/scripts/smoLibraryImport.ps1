@@ -35,6 +35,7 @@ $scriptBlock = {
     #region Names
     if ($PSVersionTable.PSEdition -eq "Core") {
         $names = @(
+            'Microsoft.SqlServer.XEvent.XELite',
             'Microsoft.Data.Tools.Sql.BatchParser',
             'Microsoft.SqlServer.ConnectionInfo',
             'Microsoft.SqlServer.Management.Dmf',
@@ -58,6 +59,7 @@ $scriptBlock = {
         )
     } else {
         $names = @(
+            'Microsoft.SqlServer.XEvent.XELite',
             'Microsoft.SqlServer.Smo',
             'Microsoft.SqlServer.SmoExtended',
             'Microsoft.SqlServer.ConnectionInfo',
